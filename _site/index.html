@@ -15,7 +15,12 @@
 <meta name="msapplication-TileColor" content="#FFFFFF" />
 <meta name="msapplication-TileImage" content="/img/favicon/mstile-144x144.png" />
 
+<!-- leaflet -->
+<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css" />
+<script src="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js"></script>
+
 <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic' rel='stylesheet' type='text/css'>
 <link href="css/style.css" rel="stylesheet">
 <script type="text/javascript" src="js/jquery.js"></script>
 <!--[if IE]>
@@ -24,20 +29,66 @@
 </head>
 <body>
 
-<section class="hoot">
-  <img id="hoot" src="img/oaw.svg">
+<section id="navbar">
+  <div id="logo"></div>
+  <nav>
+    <ul>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 </section>
 
-<section class="intro">
+<section id="hoot" class="fullbg">
+  <img id="hoot-svg" src="img/oaw.svg">
+</section>
+
+<section id="intro">
   <!-- <h1>owl &amp; wolf</h1>
   <hr> -->
-  <h2>We <span class="underline">create</span> and <span class="underline">invigorate</span> your brand by promoting <span class="underline">collaboration</span> and <span class="underline">adaptability</span>.</h2>
+  <h2>We solve problems and create opportunity through effective design and collaboration.</h2>
 </section>
 
-<section class="contact">
-  <h2>Let's work together.</h2>
-  <p class="email">hello@theowlandwolf.com <span>|</span> 206-854-5372</p>
+<section class="block dark partial">
+  <div class="container">
+    <h2>Our work.</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin odio ex, tincidunt sed molestie a, malesuada in dui. Donec sit amet nunc leo. Curabitur ut nunc lectus. Mauris at massa congue, mattis velit a, vulputate eros. Sed nunc est, suscipit in dui vel, ullamcorper ultricies massa. Donec eu dolor nibh. Proin sit amet velit et elit varius accumsan ut vel orci.</p>
+  </div>
 </section>
+
+<section id="work" class="cf">
+  <div class="work-item full fullbg" style="background-image:url(/img/work/HB-flaka.jpg);"></div>
+  <div class="work-item fullbg" style="background-image:url(/img/work/SCT-home.jpg);"></div>
+  <div class="work-item fullbg" style="background-image:url(/img/work/VT-home.jpg);"></div>
+</section>
+
+<section id="about" class="block extra">
+  <div class="container">
+    <h2>two guys, a girl, and four brick walls.</h2>
+    <p>We are a collective of designers based in Pioneer Square, Seattle. We focus on creating simple, clean designs that are equal parts functional, engaging, and flexible. From reimagining your brand to elevating your marketing presence, our small team shares a passion for creating progressive ideas and translating them into engaging, intelligent and innovative user experiences.</p>
+    <div class="owl">
+      <img src="http://placehold.it/250x250">
+      <h3>Kiki Abba</h3>
+      <p class="title">Client Director & Content Marketer</p>
+      <p class="subtitle">The Comedian</p>
+    </div>
+    <div class="owl">
+      <img src="http://placehold.it/250x250">
+      <h3>August Laguio</h3>
+      <p class="title">Creative Designer</p>
+      <p class="subtitle">The Dad</p>
+    </div>
+    <div class="owl">
+      <img src="http://placehold.it/250x250">
+      <h3>Sam Matthews</h3>
+      <p class="title">Web Developer</p>
+      <p class="subtitle">The Peanut Gallery</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact"></section>
 
 <script type="text/javascript" src="js/site.js"></script>
 </body>
