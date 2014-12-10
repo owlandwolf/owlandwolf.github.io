@@ -64,6 +64,11 @@ h2 {
 .block p {
   font-size:0.9em;
 }
+.block p.block-desc {
+  display:block;
+  margin:auto;
+  max-width:650px;
+}
 .block.partial h2:after {
   left: 0;
   margin-left:0;
