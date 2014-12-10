@@ -188,8 +188,44 @@ section#intro {
 
 section#work {}
 .work-item {
+  position:relative;
   height:200px;
   background-position:center center;
+}
+.work-item-info {
+  background:rgba(0,0,0,0.2);
+  width:100%;
+  position:absolute;
+  bottom:0;
+  padding:5px 10px;
+  box-sizing:border-box;  
+  -moz-box-sizing:border-box; 
+  -webkit-box-sizing:border-box;
+}
+.work-item-name {
+  font-family: 'Lora', serif;
+  font-weight:900;
+  color:#fff;
+  text-shadow:1px 1px 1px rgba(0,0,0,0.8);
+}
+.work-item-services {
+  list-style-type: none;
+}
+.work-item-services li {
+  font-family:'Lato', sans-serif;
+  display:inline-block;
+  color:#fff;
+  font-size:.8em;
+  text-transform:uppercase;
+  margin-right:10px;
+  text-shadow:1px 1px 1px rgba(0,0,0,0.8);
+}
+.work-item-services li a {
+  font-family:'Lato', sans-serif;
+  color:#fff;
+}
+.work-item-services li a:hover {
+  border-bottom:1px solid white;
 }
 @media (min-width: 40em) {
   .work-item {

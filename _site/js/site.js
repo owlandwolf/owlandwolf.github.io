@@ -1,7 +1,9 @@
 function init() {
 
   var map = L.map('contact', {
-    zoomControl: false
+    zoomControl: false,
+    scrollWheelZoom: false,
+    dragging: false
   }).setView([47.599518, -122.25], 12);
   L.tileLayer('http://{s}.tile.stamen.com/watercolor/{z}/{x}/{y}.png').addTo(map);
     var popup = L.popup({
