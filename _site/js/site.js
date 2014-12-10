@@ -1,6 +1,8 @@
 function init() {
 
-  var map = L.map('contact').setView([47.599518, -122.25], 12);
+  var map = L.map('contact', {
+    zoomControl: false
+  }).setView([47.599518, -122.25], 12);
   L.tileLayer('http://{s}.tile.stamen.com/watercolor/{z}/{x}/{y}.png').addTo(map);
     var popup = L.popup({
     'offset': [395, 69]
@@ -13,7 +15,7 @@ function init() {
   }).setRadius(6).bindPopup(popup).addTo(map).openPopup();
 
 
-  $('a').on('click', function(){
+  $('a.scroll').on('click', function(){
     if($(this).attr('href').indexOf('#')>-1) {
       event.preventDefault();
       var id = $(this).attr("href");
@@ -24,7 +26,5 @@ function init() {
     }
   });
 }
-
-// function 
 
 window.onload = init();

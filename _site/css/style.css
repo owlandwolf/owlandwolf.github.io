@@ -34,13 +34,14 @@ h2 {
 .container {
   max-width:900px;
   margin:auto;
+  padding:0 20px;
 }
 .block {
-  padding:50px 0;
+  padding:20px 0;
   width:100%;
 }
 .block.extra {
-  padding:100px 0;
+  padding:20px 0;
 }
 .block.dark {
   background-color:#111111;
@@ -50,7 +51,7 @@ h2 {
   position:relative;
   margin-bottom:20px;
 }
-.block h2:after {
+.block .block-title:after {
   background: steelblue;
   bottom: -7px;
   content: "";
@@ -60,8 +61,8 @@ h2 {
   position: absolute;
   width: 34px;
 }
-.block.partial p {
-  width:70%;
+.block p {
+  font-size:0.9em;
 }
 .block.partial h2:after {
   left: 0;
@@ -70,12 +71,31 @@ h2 {
 .block p {
   line-height:1.8em;
 }
+@media (min-width: 40em) {
+  .block {
+    padding:50px 0;
+  }
+  .container {
+    padding:0;
+  }
+  .block.extra {
+    padding:80px 0;
+  }
+  .block.partial p {
+    width:70%;
+  }
+  .block p {
+    font-size:1em;
+  }
+}
+
 
 
 #navbar {
   position:fixed;
   width:100%;
-  background-color:#fff;
+  background-color:#111;
+  z-index: 100;
 }
 #logo {
   float:left;
@@ -91,21 +111,50 @@ h2 {
 #navbar nav li a {
   display:inline-block;
   padding:.5em 1em;
+  font-family:'Lato', sans-serif;
+  text-transform:uppercase;
+  color:#e5e5e5;
+  font-weight:100;
+  letter-spacing:0.1em;
+}
+#navbar #logo a {
+  font-family:'Lato', sans-serif;
+  float:left;
+  color:#e5e5e5;
+  font-weight:900;
+  letter-spacing:0.05em;
+  text-transform:uppercase;
+  margin:8px 20px;
+}
+#navbar #logo a span {
+  font-weight:100;
+  font-family:'Lato', sans-serif;
 }
 
 
 section#hoot {
   background:url(/img/NORD-Stair.jpg) center center no-repeat;
   text-align:center;
-  padding:100px 0;
+  padding:5em 0 2em;
 }
 #hoot-svg {
   opacity:.8;
+  width:50%;
+}
+@media (min-width: 40em) {
+  section#hoot {
+    background:url(/img/NORD-Stair.jpg) center center no-repeat;
+    text-align:center;
+    padding:100px 0;
+  }
+  #hoot-svg {
+    width:auto;
+    opacity:.8;
+  }
 }
 
 
 section#intro {
-  padding:80px 0 90px;
   text-align:center;
 }
 #intro h2 {
@@ -114,7 +163,8 @@ section#intro {
   max-width:650px;
   font-weight:100;
   font-style:italic;
-  font-size:2.5em;
+  font-size:1.5em;
+  padding:0 20px;
 }
 #intro h2 {
   color:#808080;
@@ -123,21 +173,37 @@ section#intro {
   opacity:.5;
   color:#000000;
 }
-
-
-
-section#work {}
-#work .work-item {
-  height:300px;
-  width:33.33333333%;
-  background-position:center center;
-  float:left;
+@media (min-width: 40em) {
+  section#intro {
+    padding:80px 0 90px;
+    text-align:center;
+  }
+  #intro h2 {
+    font-size:2.5em;
+  }
 }
 
 
 
+
+section#work {}
+.work-item {
+  height:200px;
+  background-position:center center;
+}
+@media (min-width: 40em) {
+  .work-item {
+    height:300px;
+    width:33.33333333%;
+    background-position:center center;
+    float:left;
+  }
+}
+
+
 section#about {
   text-align:center;
+  background-color:#f9f9f9;
 }
 
 /* people */
